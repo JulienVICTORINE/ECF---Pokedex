@@ -4,7 +4,8 @@ const cardContainer = document.getElementById("cardContainer");
 var dataPokedex = [];
 
 // variables limiter l'affichage (range)
-const rangeInput = document.getElementById("rangeInput");
+const rangeInput = document.getElementById("range");
+const rangeValue = document.getElementById("rangeValue");
 let numberOfPokemonToShow = parseInt(rangeInput.value);
 
 // variables pour trier les pokémons par nom
@@ -87,7 +88,8 @@ function displayPokemons() {
 // ajout des écouteurs événements
 // bouton range : Limiter l'affichage
 rangeInput.addEventListener("input", () => {
-  numberOfPokemonToShow = parseInt(rangeInput.value).textContent;
+  numberOfPokemonToShow = parseInt(rangeInput.value);
+  rangeValue.textContent = numberOfPokemonToShow;
   displayPokemons();
 });
 //
