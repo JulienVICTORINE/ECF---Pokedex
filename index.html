@@ -15,8 +15,7 @@
       <input type="text" id="searchInput" placeholder="Search by name..." />
 
       <!-- range (slice) -->
-      <input type="range" id="range" min="1" max="5" value="2" />
-      <span id="rangeValue">2</span>
+      <input type="range" id="rangeInput" min="1" max="5" value="2" />
 
       <!-- bouton pour trier (sort) -->
       <button id="btnSortNameAsc">Name A-Z</button>
@@ -25,7 +24,17 @@
       <button id="btnSortHeightDesc">Height -</button>
     </header>
 
-    <main id="cardContainer"></main>
+    <main id="cardContainer">
+      <!-- <div class="card">
+        <h2>Bulbizarre</h2>
+        <img
+          src="http://localhost:3001/"
+          alt="image du pokemon ${nomPokemon}"
+        />
+        <p>Type : <span>${taillePokemon}</span></p>
+        <p>Height : <span>${typePokemon}</span></p>
+      </div> -->
+    </main>
 
     <script src="script.js"></script>
   </body>

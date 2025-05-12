@@ -4,8 +4,7 @@ const cardContainer = document.getElementById("cardContainer");
 var dataPokedex = [];
 
 // variables limiter l'affichage (range)
-const rangeInput = document.getElementById("range");
-const rangeValue = document.getElementById("rangeValue");
+const rangeInput = document.getElementById("rangeInput");
 let numberOfPokemonToShow = parseInt(rangeInput.value);
 
 // variables pour trier les pokémons par nom
@@ -27,19 +26,19 @@ async function getDataPokedex() {
   const data = await respone.json();
   dataPokedex = data;
   console.log("données Pokedex :", dataPokedex);
-  displayPokemeons();
+  displayPokemons();
 }
 
 // Fontion pour rechercher un pokémon
 function searchPokemons() {
   searchTerm = searchInput.value.toLowerCase();
-  displayPokemeons();
+  displayPokemons();
 }
 
 // Afficher les données
-function displayPokemeons() {
+function displayPokemons() {
   cardContainer.innerHTML = ""; // je vide le main
-  let copiePokedex = [...dataPokedex]; // je fais une copie du tableau pour pouvoir filtrer, trier, limiter les données
+  let copiePokedex = [...dataPokedex];
 
   // Filtrer par texte rechercher
   if (searchTerm !== "") {
@@ -88,34 +87,33 @@ function displayPokemeons() {
 // ajout des écouteurs événements
 // bouton range : Limiter l'affichage
 rangeInput.addEventListener("input", () => {
-  numberOfPokemonToShow = parseInt(rangeInput.value);
-  rangeValue.textContent = numberOfPokemonToShow;
-  displayPokemeons();
+  numberOfPokemonToShow = parseInt(rangeInput.value).textContent;
+  displayPokemons();
 });
 //
 
 // trier les pokemons par nom dans l'ordre croissant
 btnSortNameAsc.addEventListener("click", () => {
   sortMethod = "az";
-  displayPokemeons();
+  displayPokemons();
 });
 
 // trier les pokemons par nom dans l'ordre décroissant
 btnSortNameDesc.addEventListener("click", () => {
   sortMethod = "za";
-  displayPokemeons();
+  displayPokemons();
 });
 
 // trier les pokémons par taille dans l'ordre croissant
 btnSortHeightAsc.addEventListener("click", () => {
   sortMethod = "heightAsc";
-  displayPokemeons();
+  displayPokemons();
 });
 
 // trier les pokémons par taille dans l'ordre décroissant
 btnSortHeightDesc.addEventListener("click", () => {
   sortMethod = "heightDesc";
-  displayPokemeons();
+  displayPokemons();
 });
 
 // filtrer les pokémons par nom
