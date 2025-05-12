@@ -1,0 +1,39 @@
+{
+    "pokemon": [
+      {
+        "id": 1,
+        "name": "Bulbizarre",
+        "type": "Plante/Poison",
+        "height": 0.7,
+        "image": "img/bulbizarre.png"
+      },
+      {
+        "id": 2,
+        "name": "Salamèche",
+        "type": "Feu",
+        "height": 0.6,
+        "image": "img/salameche.png"
+      },
+      {
+        "id": 3,
+        "name": "Carapuce",
+        "type": "Eau",
+        "height": 0.5,
+        "image": "img/carapuce.png"
+      },
+      {
+        "id": 4,
+        "name": "Pikachu",
+        "type": "Électrik",
+        "height": 0.4,
+        "image": "img/pikachu.png"
+      },
+      {
+        "id": 5,
+        "name": "Roucool",
+        "type": "Normal/Vol",
+        "height": 0.3,
+        "image": "img/roucool.png"
+      }
+    ]
+  }

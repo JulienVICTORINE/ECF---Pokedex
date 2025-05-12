@@ -1,0 +1,7 @@
+json-server --watch db.json --port 3000
+
+// index
+http://localhost:3000/
+
+// endpoints
+http://localhost:3000/pokemon
